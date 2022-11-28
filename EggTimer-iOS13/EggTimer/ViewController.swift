@@ -10,6 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let softTime = 5
+    let mediumTime = 7
+    let hardTime = 12
 
-
+    @IBAction func eggPressed(_ sender: UIButton) {
+        let hardness = sender.currentTitle
+        
+        var time = 0
+        
+        if hardness == "Soft"
+        {
+            time = softTime
+        }
+        else if hardness == "Medium" {
+            time = mediumTime
+        }
+        else {
+            time = hardTime
+        }
+        
+        print("Time: \(time)")
+    }
 }
